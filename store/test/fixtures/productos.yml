@@ -11,3 +11,13 @@ two:
   descripcion: MyText
   url_imagen: MyString
   precio: 9.99
+
+
+ruby: 
+  titulo:       Programming Ruby 1.9
+  descripcion: 
+    Ruby is the fastest growing and most exciting dynamic
+    language out there.  If you need to get working programs
+    delivered fast, you should add Ruby to your toolbox.
+  precio:       49.50
+  url_imagen:   ruby.png
