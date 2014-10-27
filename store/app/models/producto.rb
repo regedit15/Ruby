@@ -5,8 +5,8 @@ class Producto < ActiveRecord::Base
 
 	validates :precio, numericality: {greater_than_or_equal_to: 0.01, message: 'El precio debe ser mayor a 0.01'}
 
-	validates_format_of :precio, :with => /\d*\.\d{2}\z/, message: 'Formato incorrecto. Ej: 100.50'
-
+	validates_format_of :precio, :with => /\d\.\d{0,2}\z/, message: 'Formato incorrecto. Ej: 100.50'
+	
 	validates :titulo, uniqueness: true
 
 	validates :url_imagen, allow_blank: true, format: {
@@ -14,6 +14,4 @@ class Producto < ActiveRecord::Base
 		%r{\.(gif|jpg|png)\Z}i,
 		message: 'La URL debe ser de tipo GIF, JPG o PNG.'
 	}
-
-
 end
