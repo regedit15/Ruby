@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.store {
+
+
   h1 {
     margin: 0;
     padding-bottom: 0.5em;
@@ -11,8 +12,7 @@
     border-bottom: 3px dotted #77d;
   }
 
-  /* An entry in the store catalog */
-  .entry {
+  .entrada {
     overflow: auto;
     margin-top: 1em;
     border-bottom: 1px dotted #77d;
@@ -20,6 +20,7 @@
 
     img {
       width: 80px;
+      max-height: 90px;
       margin-right: 5px;
       margin-bottom: 5px;
       position: absolute;
@@ -34,16 +35,15 @@
       color: #227;
     }
 
-    p, div.price_line {
+    p, div.precio_linea {
       margin-left: 100px;
       margin-top: 0.5em; 
       margin-bottom: 0.8em; 
     }
 
-    .price {
+    .precio {
       color: #44a;
       font-weight: bold;
       margin-right: 3em;
     }
   }
-}

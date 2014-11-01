@@ -57,3 +57,37 @@ Soy un Sprite muy rica
 url_imagen: 'sprite.png',
 precio: 25.00)
 # . . .
+Producto.create(titulo: 'Lata de Tomate',
+descripcion:
+%{<p>
+Soy un lata de tomate muy rica
+</p>},
+url_imagen: 'tomate_lata.png',
+precio: 8.35)
+# . . .
+Producto.create(titulo: 'Botella de Tomate',
+descripcion:
+%{<p>
+Soy una botella de tomate muy rica
+</p>},
+url_imagen: 'tomate_botella.png',
+precio: 28.80)
+# . . .
+Producto.create(titulo: 'Arbejas',
+descripcion:
+%{<p>
+Soy una lata de arbejas muy rica
+</p>},
+url_imagen: 'arbejas.png',
+precio: 7.60)
+# . . .
+Producto.create(titulo: 'Jabon en Polvo',
+descripcion:
+%{<p>
+Soy un jabon en polbo que lava muy bien
+</p>},
+url_imagen: 'jabon_en_polvo.png',
+precio: 15.40)
+# . . .
+
+
