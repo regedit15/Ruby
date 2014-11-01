@@ -9,7 +9,9 @@
 	<h3><%= producto.titulo %></h3>
 	<p><%= sanitize(producto.descripcion) %></p>
 	<div class="precio_linea">
-		<span class="precio"><%= producto.precio %></span>
+		<span class="precio"><%= sprintf("$ %0.02f", producto.precio) %></span>
+
+
 	</div>
 </div>
 <% end %>
