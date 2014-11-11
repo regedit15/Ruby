@@ -1,7 +1,7 @@
 Store::Application.routes.draw do
   #get "tienda/index"
 
-  get "store/index"
+  get "tienda/index"
 
   resources :productos
 

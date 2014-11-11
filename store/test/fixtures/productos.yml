@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  titulo: MyString1
-  descripcion: MyText1
-  url_imagen: MyString1
+  titulo: MyString
+  descripcion: MyText
+  url_imagen: MyString
   precio: 9.99
 
 two:
-  titulo: MyString2
-  descripcion: MyText2
-  url_imagen: MyString2
+  titulo: MyString
+  descripcion: MyText
+  url_imagen: MyString
   precio: 9.99
 
 

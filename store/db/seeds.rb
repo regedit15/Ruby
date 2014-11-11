@@ -89,5 +89,3 @@ Soy un jabon en polbo que lava muy bien
 url_imagen: 'jabon_en_polvo.png',
 precio: 15.40)
 # . . .
-
-

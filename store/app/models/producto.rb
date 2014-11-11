@@ -1,5 +1,5 @@
 class Producto < ActiveRecord::Base
-	attr_accessible :descripcion, :precio, :titulo, :url_imagen
+	#attr_accessible :descripcion, :precio, :titulo, :url_imagen
 
 	validates :titulo, :descripcion, :url_imagen, presence: true
 
