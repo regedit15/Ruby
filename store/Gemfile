@@ -37,4 +37,6 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+#comit desde SVN!
+
 gem 'thin'
