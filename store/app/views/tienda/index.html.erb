@@ -9,7 +9,8 @@
 	<h3><%= producto.titulo %></h3>
 	<p><%= sanitize(producto.descripcion) %></p>
 	<div class="precio_linea">
-		<span class="precio"><%= producto.precio %></span>
+		<span class="precio"><%= number_to_currency(producto.precio, unit: "$ ") %>
+</span>
 	</div>
 </div>
 <% end %>
