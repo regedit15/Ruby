@@ -14,4 +14,21 @@ class Producto < ActiveRecord::Base
 		%r{\.(gif|jpg|png)\Z}i,
 		message: 'La URL debe ser de tipo GIF, JPG o PNG.'
 	}
+
+
+	has_many :items
+
+	before_destroy :ensure_not_referenced_by_any_item
+
+	private # ensure that there are no line items referencing this product
+	def ensure_not_referenced_by_any_item
+		if items.empty?
+			return true
+		else
+			errors.add(:base, 'Line Items present')
+			return false
+		end
+	end
+
+
 end

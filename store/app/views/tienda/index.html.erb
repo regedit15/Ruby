@@ -10,7 +10,10 @@
 	<p><%= sanitize(producto.descripcion) %></p>
 	<div class="precio_linea">
 		<span class="precio"><%= number_to_currency(producto.precio, unit: "$ ") %>
-</span>
+		</span>
+
+		<%= button_to 'Add to Cart', items_path(id_producto: producto) %>
+
 	</div>
 </div>
 <% end %>

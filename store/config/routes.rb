@@ -1,4 +1,8 @@
 Store::Application.routes.draw do
+  resources :items
+
+  resources :carritos
+
   #get "tienda/index"
 
   get "tienda/index"
