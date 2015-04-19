@@ -6,10 +6,10 @@ class ApplicationController < ActionController::Base
 
 	private def carrito_actual
 	
-		Carrito.find(session[:id_carrito])
+		Carrito.find(session[:carrito_id])
 		rescue ActiveRecord::RecordNotFound
 			carrito = Carrito.create
-			session[:id_carrito] = carrito.id
+			session[:carrito_id] = carrito.id
 			carrito
 	end
 

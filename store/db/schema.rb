@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20150111205830) do
   end
 
   create_table "items", force: true do |t|
-    t.integer  "id_producto"
-    t.integer  "id_carrito"
+    t.integer  "producto_id"
+    t.integer  "carrito_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

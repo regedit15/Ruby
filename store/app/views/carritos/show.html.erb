@@ -1,4 +1,10 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
+<% end %>
+<h2>Tu Carrito!</h2>
+<ul>
+	<% @carrito.items.each do |item| %>
+	<li><%= item.producto.titulo %></li>
+	<% end %>
+</ul>
 
-<%= link_to 'Edit', edit_carrito_path(@carrito) %> |
-<%= link_to 'Back', carritos_path %>

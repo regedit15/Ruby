@@ -1,8 +1,8 @@
 class CreateItems < ActiveRecord::Migration
   def change
     create_table :items do |t|
-      t.integer :id_producto
-      t.integer :id_carrito
+      t.integer :producto_id
+      t.integer :carrito_id
 
       t.timestamps
     end

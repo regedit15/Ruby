@@ -27,7 +27,7 @@ class ItemsController < ApplicationController
     #@item = Item.new(item_params)
 
     @carrito = carrito_actual
-    producto = Producto.find(params[:id_product])
+    producto = Producto.find(params[:producto_id])
     @item = @carrito.items.build
     @item.producto = producto
 
@@ -77,6 +77,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:id_producto, :id_carrito)
+      params.require(:item).permit(:producto_id, :carrito_id)
     end
 end

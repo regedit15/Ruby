@@ -12,7 +12,7 @@
 		<span class="precio"><%= number_to_currency(producto.precio, unit: "$ ") %>
 		</span>
 
-		<%= button_to 'Add to Cart', items_path(id_producto: producto) %>
+		<%= button_to 'Add to Cart', items_path(producto_id: producto) %>
 
 	</div>
 </div>
