@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150111205830) do
+ActiveRecord::Schema.define(version: 20150606140304) do
 
   create_table "carritos", force: true do |t|
     t.datetime "created_at"
@@ -23,13 +23,14 @@ ActiveRecord::Schema.define(version: 20150111205830) do
     t.integer  "carrito_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "cantidad",    default: 1
   end
 
   create_table "productos", force: true do |t|
     t.string   "titulo"
     t.text     "descripcion"
     t.string   "url_imagen"
-    t.decimal  "precio",      precision: 10, scale: 0
+    t.decimal  "precio",      precision: 10, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end

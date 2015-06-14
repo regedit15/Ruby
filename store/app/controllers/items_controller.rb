@@ -28,7 +28,7 @@ class ItemsController < ApplicationController
 
     @carrito = carrito_actual
     producto = Producto.find(params[:producto_id])
-    @item = @carrito.items.build
+    @item = @carrito.add_producto(producto.id)
     @item.producto = producto
 
 

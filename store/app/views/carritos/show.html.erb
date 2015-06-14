@@ -4,7 +4,10 @@
 <h2>Tu Carrito!</h2>
 <ul>
 	<% @carrito.items.each do |item| %>
-	<li><%= item.producto.titulo %></li>
+	<li><%= item.cantidad %> &times; <%= item.producto.titulo %></li>
 	<% end %>
 </ul>
+
+
+
 
