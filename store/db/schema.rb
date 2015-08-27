@@ -13,26 +13,26 @@
 
 ActiveRecord::Schema.define(version: 20150627224323) do
 
-	create_table "carritos", force: true do |t|
-		t.datetime "created_at"
-		t.datetime "updated_at"
-	end
+    create_table "carritos", force: true do |t|
+        t.datetime "created_at"
+        t.datetime "updated_at"
+    end
 
-	create_table "items", force: true do |t|
-		t.integer  "producto_id"
-		t.integer  "carrito_id"
-		t.datetime "created_at"
-		t.datetime "updated_at"
-		t.integer  "cantidad",    default: 1
-	end
+    create_table "items", force: true do |t|
+        t.integer  "producto_id"
+        t.integer  "carrito_id"
+        t.datetime "created_at"
+        t.datetime "updated_at"
+        t.integer  "cantidad",    default: 1
+    end
 
-	create_table "productos", force: true do |t|
-		t.string   "titulo"
-		t.text     "descripcion"
-		t.string   "url_imagen"
-		t.decimal  "precio",      precision: 10, scale: 2
-		t.datetime "created_at"
-		t.datetime "updated_at"
-	end
+    create_table "productos", force: true do |t|
+        t.string   "titulo"
+        t.text     "descripcion"
+        t.string   "url_imagen"
+        t.decimal  "precio",      precision: 10, scale: 2
+        t.datetime "created_at"
+        t.datetime "updated_at"
+    end
 
 end

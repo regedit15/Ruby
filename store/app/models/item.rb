@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-		belongs_to :producto
-	belongs_to :carrito
+    belongs_to :producto
+    belongs_to :carrito
 
 end

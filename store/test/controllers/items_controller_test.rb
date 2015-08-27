@@ -1,53 +1,53 @@
 require 'test_helper'
 
 class ItemsControllerTest < ActionController::TestCase
-	setup do
-		@item = items(:one)
-	end
+    setup do
+        @item = items(:one)
+    end
 
-	test "should get index" do
-		get :index
-		assert_response :success
-		assert_not_nil assigns(:items)
-	end
+    test "should get index" do
+        get :index
+        assert_response :success
+        assert_not_nil assigns(:items)
+    end
 
-	test "should get new" do
-		get :new
-		assert_response :success
-	end
+    test "should get new" do
+        get :new
+        assert_response :success
+    end
 
-	test "should create item" do
-		assert_difference('Item.count') do
-			#post :create, item: { carrito_id: @item.carrito_id, producto_id: @item.producto_id }
-			post :create, producto_id: productos(:ruby).id
+    test "should create item" do
+        assert_difference('Item.count') do
+            #post :create, item: { carrito_id: @item.carrito_id, producto_id: @item.producto_id }
+            post :create, producto_id: productos(:ruby).id
 
-		end
+        end
 
-		#assert_redirected_to item_path(assigns(:item))
-		assert_redirected_to carrito_path(assigns(:item).carrito)
+        #assert_redirected_to item_path(assigns(:item))
+        assert_redirected_to carrito_path(assigns(:item).carrito)
 
-	end
+    end
 
-	test "should show item" do
-		get :show, id: @item
-		assert_response :success
-	end
+    test "should show item" do
+        get :show, id: @item
+        assert_response :success
+    end
 
-	test "should get edit" do
-		get :edit, id: @item
-		assert_response :success
-	end
+    test "should get edit" do
+        get :edit, id: @item
+        assert_response :success
+    end
 
-	test "should update item" do
-		patch :update, id: @item, item: { carrito_id: @item.carrito_id, producto_id: @item.producto_id }
-		assert_redirected_to item_path(assigns(:item))
-	end
+    test "should update item" do
+        patch :update, id: @item, item: { carrito_id: @item.carrito_id, producto_id: @item.producto_id }
+        assert_redirected_to item_path(assigns(:item))
+    end
 
-	test "should destroy item" do
-		assert_difference('Item.count', -1) do
-			delete :destroy, id: @item
-		end
+    test "should destroy item" do
+        assert_difference('Item.count', -1) do
+            delete :destroy, id: @item
+        end
 
-		assert_redirected_to items_path
-	end
+        assert_redirected_to items_path
+    end
 end
