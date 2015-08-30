@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
 
         respond_to do |format|
             if @item.save
-                format.html { redirect_to @item.carrito, notice: 'Line item was successfully created.' }
+                format.html { redirect_to @item.carrito}
 
                 #format.html { redirect_to @item, notice: 'Item was successfully created.' }
                 format.json { render :show, status: :created, location: @item }

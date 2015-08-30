@@ -12,5 +12,8 @@ class Carrito < ActiveRecord::Base
         current_item
     end
 
+    def precio_total
+        items.to_a.sum { |item| item.precio_total }
+    end
 
 end

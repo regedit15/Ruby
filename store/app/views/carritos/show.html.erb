@@ -2,12 +2,30 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 <h2>Tu Carrito!</h2>
-<ul>
-	<% @carrito.items.each do |item| %>
-	<li><%= item.cantidad %> &times; <%= item.producto.titulo %></li>
-	<% end %>
-</ul>
 
+<table>
+    <% @carrito.items.each do |item| %>
 
+    <tr>
+        <td>
+            <%= item.cantidad %>
+            &times;
+        </td>
+        <td>
+            <%= item.producto.titulo %>
+        </td>
+        <td class="precio_item">
+            <%= number_to_currency(item.precio_total) %>
+        </td>
+    </tr>
 
+    <% end %>
 
+    <tr class="linea_total">
+        <td colspan="2">Total</td>
+        <td class="celda_total"><%= number_to_currency(@carrito.precio_total) %></td>
+    </tr>
+
+</table>
+
+<%= button_to 'Vaciar Carrito', @carrito, method: :delete, data: { confirm: 'Estas seguro que desea quitar todos los items?' } %>

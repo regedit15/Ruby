@@ -55,9 +55,11 @@ class CarritosController < ApplicationController
     # DELETE /carritos/1
     # DELETE /carritos/1.json
     def destroy
+        @carrito = carrito_actual
+        session[:carrito_id] = nil
         @carrito.destroy
         respond_to do |format|
-            format.html { redirect_to carritos_url, notice: 'Carrito was successfully destroyed.' }
+            format.html { redirect_to tienda_url, notice: 'Tu carrito actual esta vacio' }
             format.json { head :no_content }
         end
     end

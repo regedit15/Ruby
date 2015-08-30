@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tienda</title>
+	<title>M@rtínStore</title>
 	<%= stylesheet_link_tag    "application", :media => "all" %>
 	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tags %>
@@ -10,8 +10,8 @@
 <body class='<%= controller.controller_name %>'>
 
 	<div id="bandera">
-		<%= image_tag("logo.png") %>
-		<%= @page_title || "Pragmatic Bookshelf" %>
+		<%= image_tag("logo.gif", class:"imagen_logo") %>
+		<%= @page_title || "M@rtínStore" %>
 	</div>
 	<div id="columnas">
 		<div id="lado">
