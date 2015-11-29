@@ -1,8 +1,13 @@
-<tr>
-    <td><%= item.cantidad %>&times;</td>
-    <td><%= item.producto.titulo %></td>
+<% if item == @carrito_actual %>
+<tr id="item_actual">
+    <% else %>
+    <tr>
+        <% end %>
 
-    <td class="precio_item">
-        <%= number_to_currency(item.precio_total) %>
-    </td>
-</tr>
+        <td><%= item.cantidad %>&times;</td>
+        <td><%= item.producto.titulo %></td>
+
+        <td class="precio_item">
+            <%= number_to_currency(item.precio_total) %>
+        </td>
+    </tr>

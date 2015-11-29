@@ -31,11 +31,10 @@ class ItemsController < ApplicationController
         @item = @carrito.add_producto(producto.id)
         @item.producto = producto
 
-
         respond_to do |format|
             if @item.save
-                format.html { redirect_to @item.carrito}
-                format.js
+                format.html { redirect_to store_url}
+                format.js { @carrito_actual = @item }
                 #format.html { redirect_to @item, notice: 'Item was successfully created.' }
                 format.json { render :show, status: :created, location: @item }
             else
