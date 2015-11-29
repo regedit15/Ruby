@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>M@rtínStore</title>
-	<%= stylesheet_link_tag    "application", :media => "all" %>
-	<%= javascript_include_tag "application" %>
-	<%= csrf_meta_tags %>
+    <title>M@rtínStore</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+        <%= javascript_include_tag "application" %>
+            <%= csrf_meta_tags %>
 </head>
 
 <body class='<%= controller.controller_name %>'>
 
-	<div id="bandera">
-		<%= image_tag("logo.gif", class:"imagen_logo") %>
-		<%= @page_title || "M@rtínStore" %>
-	</div>
-	<div id="columnas">
-		<div id="lado">
-			<ul>
-				<li><a href="http://localhost:3000/">Home</a></li>
-				<li><a href="http://www..../faq">Preguntas</a></li>
-				<li><a href="http://www..../news">Noticias</a></li>
-				<li><a href="http://www..../contact">Contacto</a></li>
-			</ul>
-		</div>
+    <div id="bandera">
+        <%= image_tag("logo.gif", class:"imagen_logo") %>
+            <%= @page_title || "M@rtínStore" %>
+    </div>
+    <div id="columnas">
+
+        <div id="lado">
+            <div id="carrito">
+                <%= render @carrito %>
+            </div>
+
+            <ul>
+                <li><a href="http://localhost:3000/">Home</a></li>
+                <li><a href="http://www..../faq">Preguntas</a></li>
+                <li><a href="http://www..../news">Noticias</a></li>
+                <li><a href="http://www..../contact">Contacto</a></li>
+            </ul>
+        </div>
 
 
-		<div id="principal">
-			<%= yield %>
-		</div>
-	</div>
+        <div id="principal">
+            <%= yield %>
+        </div>
+    </div>
 </body>
+
 </html>

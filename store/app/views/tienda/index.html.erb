@@ -5,15 +5,15 @@
 
 <% @productos.each do |producto| %>
 <div class="entrada">
-	<%= image_tag(producto.url_imagen) %>
-	<h3><%= producto.titulo %></h3>
-	<p><%= sanitize(producto.descripcion) %></p>
-	<div class="precio_linea">
-		<span class="precio"><%= number_to_currency(producto.precio, unit: "$ ") %>
-		</span>
+    <%= image_tag(producto.url_imagen) %>
+    <h3><%= producto.titulo %></h3>
+    <p><%= sanitize(producto.descripcion) %></p>
+    <div class="precio_linea">
+        <span class="precio"><%= number_to_currency(producto.precio, unit: "$ ") %>
+        </span>
 
-		<%= button_to 'Add to Cart', items_path(producto_id: producto) %>
+        <%= button_to 'Add to Cart', items_path(producto_id: producto), remote: true%>
 
-	</div>
+    </div>
 </div>
 <% end %>

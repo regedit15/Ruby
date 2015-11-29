@@ -3,7 +3,7 @@
 <% end %>
 <h2>Tu Carrito!</h2>
 
-<table>
+<!-- <table>
     <% @carrito.items.each do |item| %>
 
     <tr>
@@ -28,4 +28,12 @@
 
 </table>
 
+<%= button_to 'Vaciar Carrito', @carrito, method: :delete, data: { confirm: 'Estas seguro que desea quitar todos los items?' } %> -->
+
+<%= render(@carrito.items) %>
+
+<tr class="linea_total">
+    <td colspan="2">Total</td>
+    <td class="celda_total"><%= number_to_currency(@carrito.precio_total) %></td>
+</tr>
 <%= button_to 'Vaciar Carrito', @carrito, method: :delete, data: { confirm: 'Estas seguro que desea quitar todos los items?' } %>
