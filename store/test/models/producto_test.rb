@@ -19,18 +19,18 @@ class ProductoTest < ActiveSupport::TestCase
 
 	test "el precio del producto debe ser positivo" do
 		producto = Producto.new(titulo:
-			"Titulooo",
+        "Titulooo",
 			descripcion: "Descripcionnnn",
 			url_imagen:
-		"aaa.jpg")
+        "aaa.jpg")
 		producto.precio = -1
 		assert producto.invalid?
 		assert_equal ["El precio debe ser mayor a 0.01"],
-		producto.errors[:precio]
+      producto.errors[:precio]
 		producto.precio = 0
 		assert producto.invalid?
 		assert_equal ["El precio debe ser mayor a 0.01"],
-		producto.errors[:precio]
+      producto.errors[:precio]
 		producto.precio = 1
 		assert producto.valid?
 	end
@@ -40,7 +40,7 @@ class ProductoTest < ActiveSupport::TestCase
 		Producto.new(titulo:"Titulooo2",
 			descripcion: "Descripcionnnn",
 			precio: 1,
-		url_imagen: imagen_url)
+      url_imagen: imagen_url)
 	end
 
 	test "URL de la imagen termina con gif, jpg o png" do
@@ -60,15 +60,16 @@ class ProductoTest < ActiveSupport::TestCase
 
 	test "producto no valido con el mismo titulo" do
 		producto = Producto.new(titulo:
-			productos(:ruby).titulo,
+        productos(:ruby).titulo,
 			descripcion: "yyy",
 			precio:
-			1,
+        1,
 			url_imagen:
-		"fred.gif")
+        "fred.gif")
 		assert producto.invalid?
 		assert_equal ["has already been taken"], producto.errors[:titulo]
 	end
+end
 
 
 

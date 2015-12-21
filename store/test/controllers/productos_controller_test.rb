@@ -59,3 +59,4 @@ class ProductosControllerTest < ActionController::TestCase
 
 		assert_redirected_to productos_path
 	end
+end
